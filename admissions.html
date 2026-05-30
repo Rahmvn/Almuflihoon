@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions | Al-Muflihoon International School</title>
+  <meta
+    name="description"
+    content="Explore admissions at Al-Muflihoon International School, including class placement, requirements, enquiries, and parent FAQs."
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body class="inner-page">
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand" aria-label="Al-Muflihoon International School home">
+        <div class="logo">AM</div>
+        <div class="brand-text">
+          <span class="site-title">Al-Muflihoon International School</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <div class="nav-item nav-item-dropdown">
+          <div class="nav-parent-row">
+            <a href="admissions.html" class="nav-parent-link active">Admissions</a>
+            <button class="nav-parent-toggle" type="button" aria-label="Toggle admissions links" aria-expanded="false">
+              <span class="nav-caret" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="nav-dropdown">
+            <a href="admissions.html">Admissions Overview</a>
+            <a href="#placement">Class Placement</a>
+            <a href="#requirements">Requirements</a>
+            <a href="#enquiry">Enquiry Form</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-block first-block" id="placement">
+      <div class="page-shell">
+        <div class="section-head section-head-left section-intro">
+          <span class="eyebrow">Class Placement</span>
+          <h1>Admissions, class placement, and enrolment guidance.</h1>
+          <p>
+            Placement guidance, enrolment requirements, and first contact are
+            presented in a simple and reassuring way.
+          </p>
+        </div>
+
+        <div class="placement-grid">
+          <article class="simple-block">
+            <h3>Tahfeez 1 to 3</h3>
+            <p>Ages 2 to 6</p>
+          </article>
+          <article class="simple-block">
+            <h3>Tahfeez 4 to 6</h3>
+            <p>Ages 6 to 10</p>
+          </article>
+          <article class="simple-block">
+            <h3>Intensive Classes</h3>
+            <p>Ages 7 to 15</p>
+          </article>
+          <article class="simple-block">
+            <h3>Special Classes</h3>
+            <p>Adults</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block section-soft" id="requirements">
+      <div class="page-shell process-grid">
+        <div class="process-panel">
+          <span class="eyebrow">Requirements</span>
+          <h2>Requirements before enrolment.</h2>
+          <ul class="clean-list">
+            <li>Recent passport photograph</li>
+            <li>Birth certificate or age declaration</li>
+            <li>Previous school record where available</li>
+            <li>Parent or guardian contact details</li>
+          </ul>
+        </div>
+
+        <div class="process-panel">
+          <span class="eyebrow">Process</span>
+          <h2>How the admissions process works.</h2>
+          <ul class="clean-list">
+            <li>Share the child's details and preferred class</li>
+            <li>Receive placement guidance from the school</li>
+            <li>Proceed to school visit, registration, or payment step</li>
+            <li>Ask questions on fees, uniforms, or available spaces</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="enquiry">
+      <div class="page-shell form-shell">
+        <div class="section-head">
+          <span class="eyebrow">Enquiry Form</span>
+          <h2>Submit an admissions enquiry.</h2>
+          <p>Use this form to begin the admissions conversation with the school.</p>
+        </div>
+
+        <form class="form-grid" action="#" method="POST">
+          <div class="field">
+            <label for="parent-name">Parent Full Name</label>
+            <input type="text" id="parent-name" name="parent_full_name" required />
+          </div>
+          <div class="field">
+            <label for="admissions-phone">Phone Number</label>
+            <input type="tel" id="admissions-phone" name="phone_number" required />
+          </div>
+          <div class="field">
+            <label for="child-name">Child's Name</label>
+            <input type="text" id="child-name" name="child_name" required />
+          </div>
+          <div class="field">
+            <label for="child-age">Child's Age</label>
+            <input type="number" id="child-age" name="child_age" min="1" required />
+          </div>
+          <div class="field field-full">
+            <label for="class-interest">Class of Interest</label>
+            <select id="class-interest" name="class_of_interest" required>
+              <option value="">Select a class</option>
+              <option value="Tahfeez 1 to 3">Tahfeez 1 to 3</option>
+              <option value="Tahfeez 4 to 6">Tahfeez 4 to 6</option>
+              <option value="Intensive Classes">Intensive Classes</option>
+              <option value="Special Classes">Special Classes</option>
+              <option value="Core Education">Core Education Enquiry</option>
+            </select>
+          </div>
+          <div class="field field-full">
+            <label for="admission-message">Additional Note</label>
+            <textarea id="admission-message" name="message" rows="5" placeholder="Share any question about placement, readiness, or admissions support."></textarea>
+          </div>
+          <button type="submit" class="btn form-btn compact-form-btn">Send Enquiry</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-block section-soft" id="faq">
+      <div class="page-shell faq-shell">
+        <div class="section-head section-head-left">
+          <span class="eyebrow">FAQ</span>
+          <h2>Frequently asked questions.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How do I know the right class for my child?</summary>
+            <p>The school can guide placement based on age, readiness, and prior exposure.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can Tahfeez be combined with core academics?</summary>
+            <p>Yes. The school can present a broader learning structure for families who want both.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is boarding available?</summary>
+            <p>Yes. Parents can ask for guidance on the boarding option, routine, and student care during the admissions process.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can parents visit before registration?</summary>
+            <p>Yes. Visits, calls, and orientation conversations can be part of the process.</p>
+          </details>
+          <details class="faq-item">
+            <summary>When are fee and material details shared?</summary>
+            <p>Those details can be discussed during the admissions conversation after first enquiry.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="page-shell footer-layout">
+      <div>
+        <div class="footer-brand">
+          <div class="footer-logo">AM</div>
+          <div>
+            <h3>Al-Muflihoon International School</h3>
+          </div>
+        </div>
+        <p class="footer-note">
+          A school environment shaped by structure, trust, and clear educational direction.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>No. 121k1 Road Sector F, FHA, Lugbe, Abuja</p>
+        <p>08038612004, 09098538888, 08039538888</p>
+        <a href="https://wa.me/2348038612004" class="btn footer-btn" target="_blank" rel="noopener noreferrer">
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 Al-Muflihoon International School. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
