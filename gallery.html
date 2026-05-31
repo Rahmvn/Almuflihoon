@@ -185,24 +185,40 @@
             <span class="eyebrow">Campus Marker</span>
             <h3>School signboard and address</h3>
             <div class="media-frame gallery-proof-frame">
-              <a
-                href="img/gallery/gallery-school-signboard.jpg"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open the school signboard image"
+              <button
+                type="button"
+                class="gallery-lightbox-trigger"
+                data-image-viewer-open
+                data-image-src="img/gallery/gallery-school-signboard.jpg"
+                data-image-alt="The Al-Muflihoon International School signboard showing the school name and address"
+                aria-label="Open a larger view of the school signboard image"
               >
                 <img
                   src="img/gallery/gallery-school-signboard.jpg"
                   alt="The Al-Muflihoon International School signboard showing the school name and address"
                   loading="lazy"
                 />
-              </a>
+              </button>
             </div>
             <p>The school signboard shows the school name, contact details, and location in Lugbe, Abuja.</p>
           </article>
         </div>
       </div>
     </section>
+
+    <div class="image-viewer" id="signboardViewer" data-image-viewer hidden>
+      <button
+        class="image-viewer-close"
+        type="button"
+        aria-label="Close enlarged image"
+        data-image-viewer-close
+      >
+        ×
+      </button>
+      <div class="image-viewer-panel" role="dialog" aria-modal="true" aria-label="Enlarged school signboard image">
+        <img src="" alt="" data-image-viewer-image />
+      </div>
+    </div>
 
     <section class="section-block">
       <div class="page-shell">

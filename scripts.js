@@ -351,3 +351,48 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   updateDots();
   startAutoAdvance();
 });
+
+const imageViewer = document.querySelector("[data-image-viewer]");
+const imageViewerImage = imageViewer ? imageViewer.querySelector("[data-image-viewer-image]") : null;
+const imageViewerClose = imageViewer ? imageViewer.querySelector("[data-image-viewer-close]") : null;
+
+if (imageViewer && imageViewerImage && imageViewerClose) {
+  const closeImageViewer = () => {
+    imageViewer.hidden = true;
+    imageViewerImage.removeAttribute("src");
+    imageViewerImage.alt = "";
+    document.body.style.overflow = "";
+  };
+
+  const openImageViewer = (src, alt) => {
+    imageViewerImage.src = src;
+    imageViewerImage.alt = alt || "";
+    imageViewer.hidden = false;
+    document.body.style.overflow = "hidden";
+  };
+
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-image-viewer-open]");
+
+    if (!trigger) {
+      return;
+    }
+
+    event.preventDefault();
+    openImageViewer(trigger.dataset.imageSrc, trigger.dataset.imageAlt);
+  });
+
+  imageViewerClose.addEventListener("click", closeImageViewer);
+
+  imageViewer.addEventListener("click", (event) => {
+    if (event.target === imageViewer) {
+      closeImageViewer();
+    }
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !imageViewer.hidden) {
+      closeImageViewer();
+    }
+  });
+}
