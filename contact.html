@@ -3,15 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Al-Muflihoon International School</title>
+  <title>Contact Al-Muflihoon International School | Lugbe, Abuja</title>
   <meta
     name="description"
-    content="Contact Al-Muflihoon International School for admissions enquiries, school visits, and parent guidance."
+    content="Contact Al-Muflihoon International School in Lugbe, Abuja for admissions enquiries, school visits, boarding questions, and parent guidance."
   />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_NG" />
+  <meta property="og:site_name" content="Al-Muflihoon International School" />
+  <meta
+    property="og:title"
+    content="Contact Al-Muflihoon International School | Lugbe, Abuja"
   />
+  <meta
+    property="og:description"
+    content="Get the school address, phone numbers, email, WhatsApp contact, and map details for Al-Muflihoon International School."
+  />
+  <meta name="twitter:card" content="summary" />
+  <meta
+    name="twitter:title"
+    content="Contact Al-Muflihoon International School | Lugbe, Abuja"
+  />
+  <meta
+    name="twitter:description"
+    content="Get the school address, phone numbers, email, WhatsApp contact, and map details for Al-Muflihoon International School."
+  />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Al-Muflihoon International School",
+      "description": "Contact details, map, and enquiry options for Al-Muflihoon International School in Lugbe, Abuja.",
+      "inLanguage": "en",
+      "about": {
+        "@type": "School",
+        "name": "Al-Muflihoon International School",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "No. 121k1 Road Sector F, FHA",
+          "addressLocality": "Lugbe",
+          "addressRegion": "Abuja",
+          "addressCountry": "NG"
+        },
+        "telephone": "+2348038612004",
+        "email": "almuflihooninterlschool@gmail.com"
+      }
+    }
+  </script>
   <link rel="stylesheet" href="style.css" />
   <script src="scripts.js" defer></script>
 </head>
@@ -19,9 +58,10 @@
   <header class="navbar">
     <div class="nav-container">
       <a href="index.html" class="brand" aria-label="Al-Muflihoon International School home">
-        <div class="logo">AM</div>
+        <div class="logo"><img src="img/logo.png" alt="Al-Muflihoon International School Logo"></div>
         <div class="brand-text">
           <span class="site-title">Al-Muflihoon International School</span>
+          <span class="brand-subtitle">Lugbe, Abuja</span>
         </div>
       </a>
 
@@ -62,8 +102,8 @@
         <div class="contact-column">
           <div class="section-intro contact-intro-block">
             <span class="eyebrow">Contact</span>
-            <h1>Contact the school for admissions and general enquiries.</h1>
-            <p>Contact the school for admissions guidance, school visits, and general parent enquiries.</p>
+            <h1>Get in touch.</h1>
+            <p>Reach the school for admissions guidance, school visits, and general parent enquiries.</p>
           </div>
           <div class="contact-stack">
             <article class="contact-row plain-contact">
@@ -76,7 +116,7 @@
             </article>
             <article class="contact-row plain-contact">
               <strong>Email</strong>
-           
+              <p>almuflihooninterlschool@gmail.com</p>
             </article>
           </div>
 
@@ -87,7 +127,15 @@
 
         <div class="contact-column">
           <div class="form-shell contact-form-shell">
-            <form class="form-grid form-grid-single" action="#" method="POST">
+            <form
+              class="form-grid form-grid-single"
+              action="https://formspree.io/f/xgoqbqrd"
+              method="POST"
+              data-formspree
+              data-success-message="Your message has been sent. The school will get back to you soon."
+            >
+              <input type="hidden" name="form_type" value="Contact Form" />
+              <input type="hidden" name="_subject" value="Website contact enquiry" />
               <div class="field">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required />
@@ -105,6 +153,7 @@
                 <textarea id="message" name="message" rows="6" required></textarea>
               </div>
               <button type="submit" class="btn form-btn">Send Enquiry</button>
+              <p class="form-status" data-form-status aria-live="polite"></p>
             </form>
           </div>
 
@@ -137,9 +186,10 @@
     <div class="page-shell footer-layout">
       <div>
         <div class="footer-brand">
-          <div class="footer-logo">AM</div>
+          <div class="footer-logo"><img src="img/logo.png" alt="Al-Muflihoon International School Logo"></div>
           <div>
             <h3>Al-Muflihoon International School</h3>
+            <p class="footer-tagline">Lugbe, Abuja</p>
           </div>
         </div>
         <p class="footer-note">
