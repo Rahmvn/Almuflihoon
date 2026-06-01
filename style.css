@@ -993,6 +993,17 @@ h4 {
   color: var(--white);
 }
 
+.cta-band .btn-outline-green {
+  border-color: rgba(255, 255, 255, 0.34);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.cta-band .btn-outline-green:hover {
+  background: var(--white);
+  color: var(--green-800);
+}
+
 .cta-layout {
   grid-template-columns: 1fr auto;
   align-items: center;
