@@ -117,6 +117,26 @@ if (navbar) {
   updateNavbarState();
 }
 
+document.querySelectorAll(".media-frame img").forEach((image) => {
+  const frame = image.closest(".media-frame");
+
+  if (!frame) {
+    return;
+  }
+
+  const markLoaded = () => {
+    frame.classList.add("is-loaded");
+  };
+
+  if (image.complete && image.naturalWidth > 0) {
+    markLoaded();
+    return;
+  }
+
+  image.addEventListener("load", markLoaded, { once: true });
+  image.addEventListener("error", markLoaded, { once: true });
+});
+
 document.querySelectorAll("[data-formspree]").forEach((form) => {
   if (window.location.protocol === "file:") {
     return;
