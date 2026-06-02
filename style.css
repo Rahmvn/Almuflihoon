@@ -2241,15 +2241,14 @@ h4 {
   }
 
   .brand-text {
-    max-width: 180px;
+    max-width: calc(100% - 62px);
   }
 
   .site-title {
     font-size: 0.84rem;
     line-height: 1.12;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    overflow: visible;
+    white-space: normal;
   }
 
   .hamburger {
