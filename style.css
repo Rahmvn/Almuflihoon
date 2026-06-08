@@ -1050,6 +1050,7 @@ h4 {
   max-width: 660px;
 }
 
+/* FIX: Remove huge top padding on inner pages to eliminate white gap under navbar */
 .first-block {
   padding-top: 132px;
 }
@@ -1059,6 +1060,23 @@ h4 {
   padding-bottom: 34px;
 }
 
+/* Override for all inner pages – remove the excess top padding */
+/* Give inner pages a comfortable but not excessive top gap */
+.inner-page .first-block,
+.inner-page .about-first-block {
+  padding-top: 32px !important;
+}
+
+/* Keep the top margin removal for first elements (prevents double spacing) */
+main > :first-child,
+main .first-block > :first-child,
+main .about-first-block > :first-child,
+main .section-block:first-child > :first-child,
+.inner-page .section-intro h1,
+.inner-page .eyebrow:first-child,
+.inner-page .section-head:first-child {
+  margin-top: 0 !important;
+}
 .about-intro-split {
   grid-template-columns: 1.08fr 0.92fr;
   align-items: center;
@@ -1547,11 +1565,93 @@ h4 {
   border-radius: 24px;
   background: #10211a;
   box-shadow: 0 22px 48px rgba(10, 25, 19, 0.18);
+  position: relative;
 }
 
 .video-embed-shell iframe {
   width: 100%;
   height: 100%;
+}
+
+.video-embed-shell video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #000;
+}
+
+.video-embed-shell .single-video-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.video-embed-shell .single-video-slide.is-active {
+  display: block;
+}
+
+.video-embed-shell .single-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 6;
+}
+
+.video-embed-shell .single-carousel-btn.prev {
+  left: 12px;
+}
+
+.video-embed-shell .single-carousel-btn.next {
+  right: 12px;
+}
+
+/* Skeleton loader for iframe videos */
+.iframe-skeleton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  z-index: 5;
+  border-radius: 24px;
+  backdrop-filter: blur(2px);
+}
+
+.skeleton-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(33, 72, 54, 0.2);
+  border-top-color: var(--gold-500, #b3924f);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.skeleton-text {
+  color: var(--text-700, #56675f);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .memorization-video-card .btn {
